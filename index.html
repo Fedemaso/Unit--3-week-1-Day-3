@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolatore Tasse Lavoratori Autonomi</title>
+
+    <style>
+      body {
+        background-image: url(https://studiopietrella.it/wp-content/uploads/2022/09/tasse-1024x557.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+
+      #risultato {
+        border-radius: 10px;
+        background-color: #51aea6;
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h1>Calcolatore Tasse Lavoratori Autonomi</h1>
+      <form id="calcolaTasseForm">
+        <div class="mb-3">
+          <label for="codredd" class="form-label">Codice Reddito:</label>
+          <input type="number" class="form-control" id="codredd" required />
+        </div>
+        <div class="mb-3">
+          <label for="redditoannuolordo" class="form-label"
+            >Reddito Annuo Lordo:</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="redditoannuolordo"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="tasseinps" class="form-label">Tasse INPS:</label>
+          <input type="number" class="form-control" id="tasseinps" required />
+        </div>
+        <div class="mb-3">
+          <label for="tasseirpef" class="form-label">Tasse IRPEF:</label>
+          <input type="number" class="form-control" id="tasseirpef" required />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Calcola Reddito Annuo Netto
+        </button>
+      </form>
+
+      <div id="risultato" class="mt-4 p-4 text-center">
+        <h2>Risultato:</h2>
+        <p>Reddito Annuo Netto: <span id="redditoAnnuoNetto"></span></p>
+        <img
+          src="https://lepaginedeisoldi.it/wp-content/uploads/2019/03/lepaginedeisoldi_800x576-624x449.jpg"
+        />
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+    <script src="calcoloTasse.js"></script>
+  </body>
+</html>
